@@ -6,10 +6,10 @@ import haxe.CallStack;
 import haxe.io.Path;
 import sys.io.File;
 import sys.FileSystem;
-import jta.api.DiscordClient;
-import jta.api.native.WindowsAPI;
-import jta.util.WindowUtil;
-import jta.util.DateUtil;
+import rhythmo.api.DiscordClient;
+import rhythmo.api.native.WindowsAPI;
+import rhythmo.util.WindowUtil;
+import rhythmo.util.DateUtil;
 
 /**
  * Class to handle crashes in the application.
