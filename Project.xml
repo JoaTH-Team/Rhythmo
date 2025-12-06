@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+	<!-- [ Application Settings ] -->
+
+	<app title="Rhythmo" packageName="com.joalor64.rhythmo" package="com.joalor64.rhythmo"
+		file="Rhythmo" main="Main" version="0.0.1" company="Joalor64" />
+
+	<!-- [ Architecture Settings ] -->
+
+	<architecture exclude="armv7" if="android" />
+
+	<!-- [ Window Settings ] -->
+
+	<!-- All targets -->
+	<window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" />
+
+	<!-- HTML5 -->
+	<window if="html5" resizable="true" />
+
+	<!-- Desktop -->
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" />
+
+	<!-- macOS -->
+	<window if="mac" orientation="auto" fullscreen="false" resizable="true" vsync="false"
+		allow-high-dpi="true" />
+
+	<!-- Mobile -->
+	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0"
+		resizable="false" allow-shaders="true" allow-high-dpi="true" />
+
+	<!-- [ Path Settings ] -->
+
+	<set name="BUILD_DIR" value="export/debug" if="debug" />
+	<set name="BUILD_DIR" value="export/release" unless="debug" />
+
+	<source path="source" />
+
+	<assets path="assets/data" />
+	<assets path="assets/fonts" />
+	<assets path="assets/images" />
+	<assets path="assets/scripts" />
+	<assets path="assets/shaders" />
+
+	<assets path="assets/music" exclude="*.ogg" if="web" />
+	<assets path="assets/music" exclude="*.mp3" unless="web" />
+	<assets path="assets/sounds" exclude="*.ogg" if="web" />
+	<assets path="assets/sounds" exclude="*.mp3" unless="web" />
+
+	<define name="NO_REDIRECT_ASSETS_FOLDER" />
+
+	<!-- [ Libraries ] -->
+
+	<haxelib name="flixel" />
+	<haxelib name="flixel-addons" />
+
+	<haxelib name="hscript" />
+	<haxelib name="polymod" />
+	<haxelib name="hxgamemode" if="linux" />
+	<haxelib name="hxdiscord_rpc" if="desktop" />
+	<haxelib name="hxcpp-debug-server" if="desktop debug" />
+
+	<haxelib name="extension-androidtools" if="android" />
+
+	<!-- [ Haxe Defines ] -->
+
+	<haxedef name="hscriptPos" />
+
+	<haxedef name="FLX_NO_DEBUG" unless="debug" />
+	<haxedef name="FLX_NO_MOUSE" if="mobile" />
+	<haxedef name="FLX_NO_TOUCH" if="desktop" />
+
+	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
+	<haxedef name="FLX_NO_SOUND_TRAY" />
+	<haxedef name="FLX_NO_HEALTH" />
+
+	<section if="debug" unless="NO_REDIRECT_ASSETS_FOLDER || html5">
+		<haxedef name="REDIRECT_ASSETS_FOLDER" />
+	</section>
+
+	<section if="release" unless="html5">
+		<haxedef name="HXCPP_CHECK_POINTER" />
+		<haxedef name="HXCPP_STACK_LINE" />
+		<haxedef name="HXCPP_STACK_TRACE" />
+	</section>
+
+	<section if="polymod">
+		<haxedef name="POLYMOD_DEBUG" value="true" if="debug" />
+		<haxedef name="POLYMOD_SCRIPT_CLASS_EXT" value=".hxc" />
+		<haxedef name="POLYMOD_SCRIPT_LIBRARY" value="scripts" />
+		<haxedef name="POLYMOD_ROOT_PATH" value="scripts/" />
+		<haxedef name="POLYMOD_APPEND_FOLDER" value="_append" />
+		<haxedef name="POLYMOD_MERGE_FOLDER" value="_merge" />
+		<haxedef name="POLYMOD_MOD_METADATA_FILE" value="_polymod_meta.json" />
+		<haxedef name="POLYMOD_MOD_ICON_FILE" value="_polymod_icon.png" />
+	</section>
+
+	<haxedef name="analyzer-optimize" />
+	<haxedef name="no-deprecation-warnings" />
+	<haxedef name="message.reporting" value="pretty" />
+
+	<!-- [ Haxe Flags ] -->
+
+	<haxeflag name="-dce" value="no" />
+
+	<haxeflag name="--macro" value="include('rhythmo')" />
+	<haxeflag name="--macro"
+		value="include('flixel', true, ['flixel.addons.editors.spine.*', 'flixel.addons.nape.*', 'flixel.system.macros.*'])" />
+	<haxeflag name="--macro" value="nullSafety('rhythmo.registries')" />
+	<haxeflag name="--macro" value="nullSafety('rhythmo.util')" />
+
+	<!-- [ Icons ] -->
+
+	<icon path="icon.png" unless="linux" />
+	<assets path="icon.png" embed="true" if="linux" />
+
+</project>
