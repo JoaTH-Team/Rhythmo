@@ -47,6 +47,11 @@
 	<assets path="assets/sounds" exclude="*.ogg" if="web" />
 	<assets path="assets/sounds" exclude="*.mp3" unless="web" />
 
+	<section if="desktop">
+		<assets path="alsoft.txt" rename="plugins/alsoft.ini" type="text" if="windows" />
+		<assets path="alsoft.txt" rename="plugins/alsoft.conf" type="text" unless="windows" />
+	</section>
+
 	<define name="NO_REDIRECT_ASSETS_FOLDER" />
 
 	<!-- [ Libraries ] -->

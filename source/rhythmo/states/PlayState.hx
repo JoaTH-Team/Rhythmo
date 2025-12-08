@@ -1,7 +1,5 @@
 package rhythmo.states;
 
-import rhythmo.Data;
-import rhythmo.modding.PolymodHandler;
 import flixel.text.FlxText;
 import flixel.FlxState;
 
@@ -10,9 +8,6 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		FlxG.autoPause = FlxG.fixedTimestep = false;
-
-		Data.init();
-		PolymodHandler.init();
 
 		super.create();
 

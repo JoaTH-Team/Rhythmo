@@ -31,7 +31,7 @@ class Main extends openfl.display.Sprite
 	/**
 	 * The initial state of the game.
 	 */
-	private static final GAME_INITIAL_STATE:InitialState = () -> new rhythmo.states.PlayState();
+	private static final GAME_INITIAL_STATE:InitialState = () -> new rhythmo.states.Startup();
 
 	/**
 	 * Whether to skip the splash screen on startup.
@@ -147,6 +147,8 @@ class Main extends openfl.display.Sprite
 		fpsDisplay = new FPS(10, 10, 0xffffff);
 		addChild(fpsDisplay);
 
-		#if desktop FlxG.mouse.visible = false; #end
+		#if desktop
+		FlxG.mouse.visible = false;
+		#end
 	}
 }
