@@ -36,8 +36,8 @@ jobs:
           haxelib install hxcpp > /dev/null
           haxelib install lime
           haxelib install openfl
-          haxelib install flixel
-          haxelib install flixel-addons
+          haxelib install flixel 6.1.0
+          haxelib install flixel-addons 3.3.2
           haxelib install hscript
           haxelib git polymod https://github.com/larsiusprime/polymod scripting-updates
           haxelib git thx.core https://github.com/fponticelli/thx.core.git
