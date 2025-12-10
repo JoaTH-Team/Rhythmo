@@ -7,4 +7,4 @@ import rhythmo.ui.BaseSubState;
  * A script that can be tied to `BaseSubState`.
  */
 @:hscriptClass
-class ScriptedBaseState extends BaseState implements HScriptedClass {}
+class ScriptedBaseSubState extends BaseSubState implements HScriptedClass {}
