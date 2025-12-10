@@ -142,7 +142,7 @@ class BaseState extends FlxTransitionableState
 		if (lastTimeChange != dumb)
 			Conductor.timeScale = lastTimeChange.timeScale;
 
-		Conductor.recalculateStuff(multi);
+		Conductor.recalculateStuff();
 
 		curStep = lastChange.stepTime + Math.floor((Conductor.songPosition - lastChange.songTime) / Conductor.stepCrochet);
 

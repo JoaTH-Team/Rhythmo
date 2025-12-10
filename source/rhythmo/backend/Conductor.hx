@@ -40,15 +40,15 @@ class Conductor
 		return bpm = newBpm;
 	}
 
-	public static function recalculateStuff(?multi:Float = 1):Void
+	public static function recalculateStuff():Void
 	{
-		safeZoneOffset = Math.floor((safeFrames / 60) * 1000) * multi;
+		safeZoneOffset = Math.floor((safeFrames / 60) * 1000);
 		crochet = ((60 / bpm) * 1000);
 		stepCrochet = crochet / timeScale[1];
 		stepsPerSection = Math.floor((16 / timeScale[1]) * timeScale[0]);
 	}
 
-	public static function mapBPMChanges(song:SongMetaData, ?songMultiplier:Float = 1.0):Void
+	public static function mapBPMChanges(song:SongMetaData):Void
 	{
 		bpmChangeMap = [];
 		timeScaleChangeMap = [];
@@ -76,6 +76,6 @@ class Conductor
 			totalPos += ((60 / curBPM) * 1000 / curTimeScale[0]) * deltaSteps;
 		}
 
-		recalculateStuff(songMultiplier);
+		recalculateStuff();
 	}
 }
