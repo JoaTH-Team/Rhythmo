@@ -38,6 +38,8 @@ jobs:
           haxelib install openfl
           haxelib install flixel 6.1.0
           haxelib install flixel-addons 3.3.2
+          haxelib git haxeui-core https://github.com/haxeui/haxeui-core 0212d8fdfcafeb5f0d5a41e1ddba8ff21d0e183b
+          haxelib git haxeui-flixel https://github.com/haxeui/haxeui-flixel 63a906a6148958dbfde8c7b48d90b0693767fd95
           haxelib install hscript
           haxelib git polymod https://github.com/larsiusprime/polymod scripting-updates
           haxelib git thx.core https://github.com/fponticelli/thx.core.git

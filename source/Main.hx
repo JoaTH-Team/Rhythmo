@@ -2,6 +2,7 @@ package;
 
 import rhythmo.Game;
 import rhythmo.backend.debug.FPS;
+import haxe.ui.Toolkit;
 #if hxgamemode
 import hxgamemode.GamemodeClient;
 #end
@@ -105,6 +106,12 @@ class Main extends openfl.display.Sprite
 	public function new():Void
 	{
 		super();
+
+		Toolkit.init();
+    	Toolkit.theme = 'dark'; 
+    	Toolkit.autoScale = false;
+    	haxe.ui.focus.FocusManager.instance.autoFocus = false;
+    	haxe.ui.tooltips.ToolTipManager.defaultDelay = 200;
 
 		#if windows
 		rhythmo.api.native.WindowsAPI.darkMode(true);
