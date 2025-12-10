@@ -1,4 +1,4 @@
-package rhythmo.substates;
+package rhythmo.ui;
 
 import flixel.FlxSubState;
 import flixel.addons.transition.FlxTransitionableState;
