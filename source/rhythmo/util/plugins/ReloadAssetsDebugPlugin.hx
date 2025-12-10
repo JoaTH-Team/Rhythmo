@@ -36,6 +36,7 @@ class ReloadAssetsDebugPlugin extends FlxBasic
 			{
 				var scriptedState = cast(FlxG.state, ScriptedBaseState);
 				FlxG.switchState(ScriptedBaseState.init(scriptedState.id));
+			}
 			else
 			    FlxG.resetState();
 		}
