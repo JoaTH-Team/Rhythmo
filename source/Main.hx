@@ -140,6 +140,7 @@ class Main extends openfl.display.Sprite
 		#end
 		rhythmo.util.plugins.EvacuateDebugPlugin.initialize();
 		rhythmo.util.plugins.CrashPlugin.initialize();
+		rhythmo.util.plugins.ReloadAssetsDebugPlugin.initialize();
 
 		FlxG.debugger.toggleKeys = [F2];
 

@@ -12,6 +12,7 @@ import rhythmo.modding.events.CreateEvent;
 import rhythmo.modding.events.UpdateEvent;
 import rhythmo.backend.Conductor.BPMChangeEvent;
 import rhythmo.backend.Conductor.TimeScaleChangeEvent;
+import rhythmo.backend.Conductor;
 import rhythmo.ui.intro.Startup;
 import rhythmo.Data;
 
