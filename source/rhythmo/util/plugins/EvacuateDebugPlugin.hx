@@ -23,7 +23,7 @@ class EvacuateDebugPlugin extends FlxBasic
 		super.update(elapsed);
 
 		if (FlxG.keys.justPressed.F4)
-			FlxG.switchState(new rhythmo.states.PlayState());
+			FlxG.switchState(new rhythmo.play.Gameplay());
 	}
 
 	override public function destroy():Void
