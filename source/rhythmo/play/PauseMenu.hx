@@ -1,8 +1,8 @@
 package rhythmo.play;
 
-import flixel.FlxSubState;
+import rhythmo.ui.BaseSubState;
 
-class PauseMenu extends FlxSubState
+class PauseMenu extends BaseSubState
 {
     public function new():Void
     {

@@ -1,17 +1,42 @@
 package rhythmo.substates;
 
 import flixel.FlxSubState;
-import.rhythmo.Data;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.util.typeLimit.NextState;
+import rhythmo.modding.module.ModuleHandler;
+import rhythmo.modding.events.CreateEvent;
+import rhythmo.modding.events.UpdateEvent;
 import rhythmo.backend.Conductor.BPMChangeEvent;
+import rhythmo.Data;
 
 class BaseSubState extends FlxSubState
 {
 	public var curStep:Int = 0;
 	public var curBeat:Int = 0;
 
+	public var id:String = 'default';
+
+	/**
+	 * @param bgColor Optional background color forwarded to FlxSubState.
+	 * @param id The ID of the substate.
+	 */
+	override public function new(?bgColor:Null<Int> = null, ?id:String = 'default'):Void
+	{
+		super(bgColor);
+
+		this.id = id;
+	}
+
 	override public function create():Void
 	{
 		super.create();
+
+		id ??= 'default';
+
+		ModuleHandler.callEvent(module ->
+		{
+			module.create(new CreateEvent(module, id));
+		});
 	}
 
 	override public function update(elapsed:Float):Void
@@ -24,9 +49,29 @@ class BaseSubState extends FlxSubState
 		if (oldStep != curStep)
 			stepHit();
 
-		FlxG.stage.frameRate = Data.settings.framerate;
-
 		super.update(elapsed);
+
+        FlxG.stage.frameRate = Data.settings.framerate;
+
+		ModuleHandler.callEvent(module ->
+		{
+			module.update(new UpdateEvent(module, id, elapsed));
+		});
+	}
+
+    override public function destroy():Void
+	{
+		super.destroy();
+
+		id = 'default';
+	}
+
+	public function transitionState(state:NextState, ?noTransition:Bool = false):Void
+	{
+		FlxTransitionableState.skipNextTransIn = noTransition;
+		FlxTransitionableState.skipNextTransOut = noTransition;
+
+		FlxG.switchState(state);
 	}
 
 	private function updateBeat():Void

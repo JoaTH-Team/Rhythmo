@@ -1,9 +1,9 @@
 package rhythmo.play;
 
 import flixel.text.FlxText;
-import flixel.FlxState;
+import rhythmo.ui.BaseState;
 
-class Gameplay extends FlxState
+class Gameplay extends BaseState
 {
 	override public function create():Void
 	{

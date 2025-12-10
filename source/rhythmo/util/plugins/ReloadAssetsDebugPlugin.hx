@@ -1,6 +1,7 @@
 package rhythmo.util.plugins;
 
 import flixel.FlxBasic;
+import rhythmo.ui.ScriptedBaseState;
 import rhythmo.modding.PolymodHandler;
 
 /**
@@ -30,7 +31,13 @@ class ReloadAssetsDebugPlugin extends FlxBasic
 		#end
 		{
 			PolymodHandler.forceReloadAssets();
-			FlxG.resetState();
+
+            if (Std.isOfType(FlxG.state, ScriptedBaseState))
+			{
+				var scriptedState = cast(FlxG.state, ScriptedBaseState);
+				FlxG.switchState(ScriptedBaseState.init(scriptedState.id));
+			else
+			    FlxG.resetState();
 		}
 	}
 
