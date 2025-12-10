@@ -1,4 +1,4 @@
-package rhythmo.debug;
+package rhythmo.backend.debug;
 
 import rhythmo.Paths;
 import haxe.Timer;

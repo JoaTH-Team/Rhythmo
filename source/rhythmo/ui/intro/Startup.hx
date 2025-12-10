@@ -1,9 +1,8 @@
-package rhythmo.states;
+package rhythmo.ui.intro;
 
 import rhythmo.Data;
 import rhythmo.modding.PolymodHandler;
 import flixel.FlxState;
-import flixel.sound.FlxSound;
 
 class Startup extends FlxState
 {
@@ -14,6 +13,6 @@ class Startup extends FlxState
 		Data.init();
 		PolymodHandler.init();
 
-		FlxG.switchState(new PlayState());
+		FlxG.switchState(new rhythmo.play.Gameplay());
 	}
 }

@@ -6,13 +6,21 @@ import rhythmo.util.FilterUtil;
 {
 	public var volume:Int = 100;
 	public var framerate:Int = 60;
+	public var laneUnderlay:Int = 0;
+	public var antialiasing:Bool = true;
 	public var fpsCounter:Bool = true;
 	#if desktop
 	public var fullscreen:Bool = false;
 	#end
-
 	public var skipSplash:Bool = false;
+	public var downScroll:Bool = false;
+	public var antiMash:Bool = false;
+	public var displayMS:Bool = false;
+	public var locale:String = 'en-US';
     public var filter:String = 'None';
+	public var noteSkinType:String = 'Default';
+	public var noteSplashType:String = 'Default';
+	public var notesRGB:Array<Array<Int>> = [[221, 0, 255], [0, 128, 255], [0, 215, 54], [255, 0, 106]];
 }
 
 /**

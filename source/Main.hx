@@ -1,7 +1,7 @@
 package;
 
 import rhythmo.Game;
-import rhythmo.debug.FPS;
+import rhythmo.backend.debug.FPS;
 #if hxgamemode
 import hxgamemode.GamemodeClient;
 #end
@@ -31,7 +31,7 @@ class Main extends openfl.display.Sprite
 	/**
 	 * The initial state of the game.
 	 */
-	private static final GAME_INITIAL_STATE:InitialState = () -> new rhythmo.states.Startup();
+	private static final GAME_INITIAL_STATE:InitialState = () -> new rhythmo.ui.intro.Startup();
 
 	/**
 	 * Whether to skip the splash screen on startup.

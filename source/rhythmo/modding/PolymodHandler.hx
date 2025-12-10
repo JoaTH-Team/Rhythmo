@@ -14,6 +14,7 @@ import rhythmo.util.macro.ClassMacro;
 import rhythmo.util.WindowUtil;
 import rhythmo.util.StateUtil;
 import rhythmo.util.TimerUtil;
+import rhythmo.locale.Locale;
 #if sys
 import sys.FileSystem;
 #end
@@ -165,6 +166,7 @@ class PolymodHandler
 			FileSystem.createDirectory(MOD_DIR);
 		#end
 
+		Locale.init(); // Initialize localization before Polymod
 		Polymod.init({
 			modRoot: MOD_DIR,
 			dirs: getMods(),
@@ -179,7 +181,8 @@ class PolymodHandler
 			loadScriptsAsync: #if html5 true #else false #end,
 			ignoredFiles: Polymod.getDefaultIgnoreList(),
 			extensionMap: ['frag' => TEXT, 'vert' => TEXT],
-			customFilesystem: buildFileSystem()
+			customFilesystem: buildFileSystem(),
+			firetongue: Locale.tongue
 		});
 
 		final registriesStart:Float = TimerUtil.start();

@@ -39,6 +39,7 @@
 	<assets path="assets/data" />
 	<assets path="assets/fonts" />
 	<assets path="assets/images" />
+	<assets path="assets/locales" />
 	<assets path="assets/scripts" />
 	<assets path="assets/shaders" />
 
@@ -61,6 +62,7 @@
 
 	<haxelib name="hscript" />
 	<haxelib name="polymod" />
+	<haxelib name="firetongue" />
 	<haxelib name="hxgamemode" if="linux" />
 	<haxelib name="hxdiscord_rpc" if="desktop" />
 	<haxelib name="hxcpp-debug-server" if="desktop debug" />
