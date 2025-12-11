@@ -44,8 +44,8 @@ class Input
 		'note_up' => {key: [kBinds[10], kBinds[14]], gamepad: [gBinds[10], gBinds[14]]},
 		'note_right' => {key: [kBinds[11], kBinds[15]], gamepad: [gBinds[11], gBinds[15]]},
 		'accept' => {key: [kBinds[16], kBinds[17]], gamepad: [gBinds[13], gBinds[16]]},
-		'back' => {key: [kBinds[18], gBinds[19]], gamepad: [gBinds[15]]},
-        'pause' => {key: [kBinds[18], gBinds[20]], gamepad: [gBinds[16]]},
+		'back' => {key: [kBinds[18], kBinds[19]], gamepad: [gBinds[15]]},
+        'pause' => {key: [kBinds[18], kBinds[20]], gamepad: [gBinds[16]]},
 		'reset' => {key: [kBinds[21]], gamepad: [gBinds[17]]}
 	];
 
@@ -68,8 +68,8 @@ class Input
 		    'note_up' => {key: [kBinds[10], kBinds[14]], gamepad: [gBinds[10], gBinds[14]]},
 		    'note_right' => {key: [kBinds[11], kBinds[15]], gamepad: [gBinds[11], gBinds[15]]},
 		    'accept' => {key: [kBinds[16], kBinds[17]], gamepad: [gBinds[13], gBinds[16]]},
-		    'back' => {key: [kBinds[18], gBinds[19]], gamepad: [gBinds[15]]},
-            'pause' => {key: [kBinds[18], gBinds[20]], gamepad: [gBinds[16]]},
+		    'back' => {key: [kBinds[18], kBinds[19]], gamepad: [gBinds[15]]},
+            'pause' => {key: [kBinds[18], kBinds[20]], gamepad: [gBinds[16]]},
 		    'reset' => {key: [kBinds[21]], gamepad: [gBinds[17]]}
 		];
 	}
