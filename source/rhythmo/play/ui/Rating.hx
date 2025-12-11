@@ -1,4 +1,4 @@
-package rhythmo.play.notes;
+package rhythmo.play.ui;
 
 import rhythmo.graphics.GameSprite;
 
