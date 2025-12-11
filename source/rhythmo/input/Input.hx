@@ -146,7 +146,7 @@ class Input
 
 			#if FLX_GAMEPAD
 			for (input in binds[tag].gamepad)
-				if (gamepad != null && gamepad.checkStatus(bind.gamepad, state))
+				if (gamepad != null && gamepad.checkStatus(input, state))
 					return true;
 			#end
 		}
@@ -196,7 +196,7 @@ class Input
 				#end
 
 				#if FLX_GAMEPAD
-				for (input in binds[tag].key)
+				for (input in binds[tag].gamepad)
 					if (gamepad != null && gamepad.checkStatus(input, state))
 						return true;
 				#end
