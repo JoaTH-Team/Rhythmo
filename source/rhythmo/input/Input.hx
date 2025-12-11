@@ -11,14 +11,14 @@ import flixel.input.FlxInput.FlxInputState;
 typedef Bind =
 {
 	/**
-	 * The keyboard key associated with the action.
+	 * The keyboard key(s) associated with the action.
 	 */
-	key:FlxKey,
+	key:Array<FlxKey>,
 
 	/**
-	 * The gamepad button associated with the action.
+	 * The gamepad button(s) associated with the action.
 	 */
-	gamepad:FlxGamepadInputID
+	gamepad:Array<FlxGamepadInputID>
 }
 
 /**
