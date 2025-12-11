@@ -139,13 +139,15 @@ class Input
 				return false;
 
 			#if FLX_KEYBOARD
-			if (FlxG.keys.checkStatus(bind.key, state))
-				return true;
+			for (input in binds[tag].key)
+				if (FlxG.keys.checkStatus(input, state))
+					return true;
 			#end
 
 			#if FLX_GAMEPAD
-			if (gamepad != null && gamepad.checkStatus(bind.gamepad, state))
-				return true;
+			for (input in binds[tag].gamepad)
+				if (gamepad != null && gamepad.checkStatus(bind.gamepad, state))
+					return true;
 			#end
 		}
 		else
@@ -188,13 +190,15 @@ class Input
 					return false;
 
 				#if FLX_KEYBOARD
-				if (FlxG.keys.checkStatus(bind.key, state))
-					return true;
+				for (input in binds[tag].key)
+					if (FlxG.keys.checkStatus(bind.key, state))
+						return true;
 				#end
 
 				#if FLX_GAMEPAD
-				if (gamepad != null && gamepad.checkStatus(bind.gamepad, state))
-					return true;
+				for (input in binds[tag].key)
+					if (gamepad != null && gamepad.checkStatus(bind.gamepad, state))
+						return true;
 				#end
 			}
 			else
