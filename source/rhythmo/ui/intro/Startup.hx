@@ -1,9 +1,9 @@
 package rhythmo.ui.intro;
 
 import rhythmo.Data;
+import rhythmo.input.Input;
 import rhythmo.ui.BaseState;
 import rhythmo.modding.PolymodHandler;
-import flixel.FlxState;
 
 class Startup extends BaseState
 {
@@ -14,6 +14,7 @@ class Startup extends BaseState
 		FlxG.autoPause = FlxG.fixedTimestep = false;
 
 		Data.init();
+		Input.refreshControls();
 		PolymodHandler.init();
 
 		transitionState(new rhythmo.play.Gameplay());

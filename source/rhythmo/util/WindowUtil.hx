@@ -39,4 +39,20 @@ class WindowUtil
 		extension.androidtools.Tools.showAlertDialog(name, desc, {name: 'Ok', func: null});
 		#end
 	}
+
+	/**
+   	 * Runs platform-specific code to open a URL in a web browser.
+     * @param url The URL to open.
+     */
+	public static function openURL(url:String):Void
+	{
+		#if linux
+		var cmd = Sys.command('xdg-open', [url]);
+		if (cmd != 0)
+			cmd = Sys.command('/usr/bin/xdg-open', [url]);
+		Sys.command('/usr/bin/xdg-open', [url]);
+		#else
+		FlxG.openURL(url);
+		#end
+	}
 }

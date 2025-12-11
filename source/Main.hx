@@ -1,7 +1,7 @@
 package;
 
 import rhythmo.Game;
-import rhythmo.backend.debug.FPS;
+import rhythmo.debug.FPS;
 import haxe.ui.Toolkit;
 #if hxgamemode
 import hxgamemode.GamemodeClient;

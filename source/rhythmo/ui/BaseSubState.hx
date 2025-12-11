@@ -6,8 +6,8 @@ import flixel.util.typeLimit.NextState;
 import rhythmo.modding.module.ModuleHandler;
 import rhythmo.modding.events.CreateEvent;
 import rhythmo.modding.events.UpdateEvent;
-import rhythmo.backend.Conductor.BPMChangeEvent;
-import rhythmo.backend.Conductor;
+import rhythmo.data.Conductor.BPMChangeEvent;
+import rhythmo.data.Conductor;
 import rhythmo.Data;
 
 class BaseSubState extends FlxSubState

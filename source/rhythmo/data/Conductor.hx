@@ -1,4 +1,4 @@
-package rhythmo.backend;
+package rhythmo.data;
 
 import rhythmo.data.SongData.SongMetaData;
 

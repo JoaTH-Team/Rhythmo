@@ -1,6 +1,8 @@
 package rhythmo;
 
 import rhythmo.util.FilterUtil;
+import flixel.input.keyboard.FlxKey;
+import flixel.input.gamepad.FlxGamepadInputID;
 
 @:structInit class Settings
 {
@@ -21,6 +23,33 @@ import rhythmo.util.FilterUtil;
 	public var noteSkinType:String = 'Default';
 	public var noteSplashType:String = 'Default';
 	public var notesRGB:Array<Array<Int>> = [[221, 0, 255], [0, 128, 255], [0, 215, 54], [255, 0, 106]];
+	public var keyboardBinds:Array<FlxKey> = [
+		LEFT, DOWN, UP, RIGHT, 
+		A, S, W, D, 
+		LEFT, DOWN, UP, RIGHT, 
+		A, S, W, D, 
+		SPACE, ENTER, BACKSPACE, ESCAPE, R
+	];
+	public var gamepadBinds:Array<FlxGamepadInputID> = [
+		DPAD_LEFT,
+		DPAD_DOWN,
+		DPAD_UP,
+		DPAD_RIGHT,
+		LEFT_STICK_DIGITAL_LEFT,
+		LEFT_STICK_DIGITAL_DOWN,
+		LEFT_STICK_DIGITAL_UP,
+		LEFT_STICK_DIGITAL_RIGHT,
+		DPAD_LEFT,
+		DPAD_DOWN,
+		DPAD_UP,
+		DPAD_RIGHT,
+		X,
+		A,
+		Y,
+		B,
+		START,
+		BACK
+	];
 }
 
 /**
