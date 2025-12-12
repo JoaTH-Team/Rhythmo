@@ -22,6 +22,6 @@ class Startup extends BaseState
 		
 		trace('Current platform: ${PlatformUtil.getPlatform()}');
 
-		transitionState((Data.settings.skipSplash) ? new Splash() : new MainMenu());
+		transitionState((!Data.settings.skipSplash) ? new Splash() : new MainMenu());
 	}
 }
