@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="note_splash.png">
+  <SubTexture name="down splash0000" x="0" y="0" width="200" height="200" />
+  <SubTexture name="left splash0000" x="200" y="0" width="200" height="200" />
+  <SubTexture name="right splash0000" x="0" y="200" width="200" height="200" />
+  <SubTexture name="up splash0000" x="200" y="200" width="200" height="200" />
+</TextureAtlas>

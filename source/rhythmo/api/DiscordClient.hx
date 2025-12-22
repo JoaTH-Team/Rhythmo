@@ -19,7 +19,7 @@ class DiscordClient
 	/**
 	 * The default Discord Client ID.
 	 */
-	private static final _defaultID:String = '1353181104307306666';
+	private static final _defaultID:String = '1449879186138337282';
 
 	public static var clientID(default, set):String = _defaultID;
 

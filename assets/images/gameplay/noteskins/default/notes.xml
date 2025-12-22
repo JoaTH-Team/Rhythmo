@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="notes.png">
+  <SubTexture name="left hold end0000" x="0" y="0" width="200" height="200" />
+  <SubTexture name="left hold0000" x="200" y="0" width="200" height="200" />
+  <SubTexture name="down hold end0000" x="0" y="0" width="200" height="200" />
+  <SubTexture name="down hold0000" x="200" y="0" width="200" height="200" />
+  <SubTexture name="up hold end0000" x="0" y="0" width="200" height="200" />
+  <SubTexture name="up hold0000" x="200" y="0" width="200" height="200" />
+  <SubTexture name="right hold end0000" x="0" y="0" width="200" height="200" />
+  <SubTexture name="right hold0000" x="200" y="0" width="200" height="200" />
+  <SubTexture name="down note0000" x="0" y="200" width="200" height="200" />
+  <SubTexture name="left note0000" x="200" y="200" width="200" height="200" />
+  <SubTexture name="right note0000" x="400" y="0" width="200" height="200" />
+  <SubTexture name="up note0000" x="400" y="200" width="200" height="200" />
+  <SubTexture name="down note pressed0000" x="0" y="400" width="200" height="200" />
+  <SubTexture name="left note pressed0000" x="200" y="400" width="200" height="200" />
+  <SubTexture name="right note pressed0000" x="400" y="400" width="200" height="200" />
+  <SubTexture name="up note pressed0000" x="600" y="0" width="200" height="200" />
+  <SubTexture name="down note receptor0000" x="600" y="200" width="200" height="200" />
+  <SubTexture name="left note receptor0000" x="600" y="400" width="200" height="200" />
+  <SubTexture name="right note receptor0000" x="0" y="600" width="200" height="200" />
+  <SubTexture name="up note receptor0000" x="200" y="600" width="200" height="200" />
+</TextureAtlas>
