@@ -94,9 +94,6 @@ class Main extends openfl.display.Sprite
 
 		rhythmo.util.WindowUtil.init();
 
-		Lib.current.stage.align = openfl.display.StageAlign.TOP_LEFT;
-		Lib.current.stage.quality = openfl.display.StageQuality.LOW;
-		Lib.current.stage.scaleMode = openfl.display.StageScaleMode.NO_SCALE;
 		Lib.current.addChild(new Main());
 	}
 
