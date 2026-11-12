@@ -271,13 +271,13 @@ class Main extends openfl.display.Sprite
 
 		#if windows
 		WindowsAPI.messageBox('Error!', 'Uncaught Error: \n$msg
-			\n\nIf you think this shouldn\'t have happened, report this error to GitHub repository!\nhttps://github.com/JoaTH-Team/Rhythmo-SC/issues', MSG_ERROR);
+			\n\nIf you think this shouldn\'t have happened, report this error to GitHub repository!\nhttps://github.com/JoaTH-Team/Rhythmo/issues', MSG_ERROR);
 		#else
 		Lib.application.window.alert('Uncaught Error: \n$msg
-			\n\nIf you think this shouldn\'t have happened, report this error to GitHub repository!\nhttps://github.com/JoaTH-Team/Rhythmo-SC/issues', 'Error!');
+			\n\nIf you think this shouldn\'t have happened, report this error to GitHub repository!\nhttps://github.com/JoaTH-Team/Rhythmo/issues', 'Error!');
 		#end
 		Sys.println('Uncaught Error: \n$msg
-			\n\nIf you think this shouldn\'t have happened, report this error to GitHub repository!\nhttps://github.com/JoaTH-Team/Rhythmo-SC/issues');
+			\n\nIf you think this shouldn\'t have happened, report this error to GitHub repository!\nhttps://github.com/JoaTH-Team/Rhythmo/issues');
 		Sys.exit(1);
 	}
 
@@ -307,7 +307,7 @@ class Main extends openfl.display.Sprite
 			}
 		}
 
-		errMsg += '\n\nPlease report this error to the GitHub page: https://github.com/JoaTH-Team/Rhythmo-SC/issues';
+		errMsg += '\n\nPlease report this error to the GitHub page: https://github.com/JoaTH-Team/Rhythmo/issues';
 
 		if (!FileSystem.exists('./crash/'))
 			FileSystem.createDirectory('./crash/');

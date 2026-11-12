@@ -9,7 +9,7 @@ import hx_arabic_shaper.bidi.UBA;
 /**
  * A simple localization system.
  * Please credit me if you use it!
- * @author Joalor64GH
+ * @author Joalor64
  */
 class Localization
 {

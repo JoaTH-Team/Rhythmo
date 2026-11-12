@@ -13,11 +13,11 @@ class AutoUpdater
 {
 	private static inline var DOWNLOAD_URL =
 		#if windows
-		'https://github.com/JoaTH-Team/Rhythmo-SC/releases/latest/download/release-windows.zip'
+		'https://github.com/JoaTH-Team/Rhythmo/releases/latest/download/release-windows.zip'
 		#elseif mac
-		'https://github.com/JoaTH-Team/Rhythmo-SC/releases/latest/download/release-mac.zip'
+		'https://github.com/JoaTH-Team/Rhythmo/releases/latest/download/release-mac.zip'
 		#elseif linux
-		'https://github.com/JoaTH-Team/Rhythmo-SC/releases/latest/download/release-linux.zip'
+		'https://github.com/JoaTH-Team/Rhythmo/releases/latest/download/release-linux.zip'
 		#else
 		''
 		#end;

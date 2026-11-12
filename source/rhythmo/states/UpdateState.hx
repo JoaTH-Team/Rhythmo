@@ -24,7 +24,7 @@ class UpdateState extends ExtendableState
 	public static function updateCheck():Void
 	{
 		trace('checking for updates...');
-		var http = new Http('https://raw.githubusercontent.com/Joalor64GH/Rhythmo-SC/main/gitVersion.json');
+		var http = new Http('https://raw.githubusercontent.com/JoaTH-Team/Rhythmo/main/gitVersion.json');
 		http.onData = (data:String) ->
 		{
 			var daRawJson:Dynamic = Json.parse(data);
@@ -50,7 +50,7 @@ class UpdateState extends ExtendableState
 			#if desktop
 			AutoUpdater.downloadUpdate();
 			#else
-			Util.openUrlPlease('https://github.com/Joalor64GH/Rhythmo-SC/releases/latest');
+			Util.openUrlPlease('https://github.com/JoaTH-Team/Rhythmo/releases/latest');
 			#end
 		}
 		else if (Input.justPressed('exit'))

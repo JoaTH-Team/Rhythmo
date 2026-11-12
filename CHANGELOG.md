@@ -16,7 +16,7 @@ Keep that in mind, as there may be some placeholder assets!
   * Use the maximum note speed on any song!
 * Lua Scripting Support
 * Discord Rich Presence
-* More Languages (PR by [NeoDev](https://github.com/JoaTH-Team/Rhythmo-SC/pull/15))
+* More Languages (PR by [NeoDev](https://github.com/JoaTH-Team/Rhythmo/pull/15))
   * Italiano (IT)
   * Bahasa Indonesia (ID)
   * Русский (RU)

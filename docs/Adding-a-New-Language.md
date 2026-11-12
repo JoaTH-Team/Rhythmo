@@ -2,7 +2,7 @@
 First, you need to create a file in `assets/languages/` called `[language-code].json`. <br>
 The name doesn't really matter, so you can call it whatever you want.
 
-For its data, copy [this](https://raw.githubusercontent.com/Joalor64GH/Rhythmo-SC/main/assets/languages/en.json), and edit it with your translations.
+For its data, copy [this](https://raw.githubusercontent.com/JoaTH-Team/Rhythmo/main/assets/languages/en.json), and edit it with your translations.
 
 ## Loading your Language
 Now, you need to edit the main text file, `assets/languages/languagesList.txt`, which just contains the data for your language(s). <br>
@@ -33,7 +33,7 @@ Deutsch (Deutschland):de:germanFont
 ```
 
 ## Localization Functions
-Like most functions, these can be accessed through [scripting](https://github.com/Joalor64GH/Rhythmo-SC/wiki/Scripting).
+Like most functions, these can be accessed through [scripting](https://github.com/JoaTH-Team/Rhythmo/wiki/Scripting).
 
 ### Switching to Another Language
 HScript:

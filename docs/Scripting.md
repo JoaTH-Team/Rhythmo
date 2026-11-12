@@ -336,7 +336,7 @@ function update(elapsed:Float)
 * `getInput(state:String, key:String)` - Checks for a specific input.
 
 ## Templates
-For the default template, use [this](https://raw.githubusercontent.com/JoaTH-Team/Rhythmo-SC/main/assets/scripts/template.lua).
+For the default template, use [this](https://raw.githubusercontent.com/JoaTH-Team/Rhythmo/main/assets/scripts/template.lua).
 
 ### Making a Sprite
 ```lua
@@ -388,10 +388,10 @@ end
 function create()
 	importHaxeLibrary("FlxG", "flixel")
 	runHaxeCode([[
-		FlxG.openURL("https://github.com/JoaTH-Team/Rhythmo-SC");
+		FlxG.openURL("https://github.com/JoaTH-Team/Rhythmo");
 	]])
 end
 ```
 
 # Need Help?
-If you need any general help or something goes wrong with your script, report an issue [here](https://github.com/Joalor64GH/Rhythmo-SC/issues).
+If you need any general help or something goes wrong with your script, report an issue [here](https://github.com/JoaTH-Team/Rhythmo/issues).

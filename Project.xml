@@ -53,11 +53,11 @@
 	<assets path="assets/states" />
 	<assets path="assets/substates" />
 
-	<assets path="mods" if="FUTURE_POLYMOD" />
+	<assets path="include/mods" rename="mods" if="FUTURE_POLYMOD" />
 
 	<section if="desktop">
-		<assets path="alsoft.ini" if="windows" />
-		<assets path="alsoft.ini" rename="alsoft.conf" unless="windows" />
+		<assets path="include/alsoft.txt" rename="alsoft.ini" if="windows" />
+		<assets path="include/alsoft.txt" rename="alsoft.conf" unless="windows" />
 	</section>
 
 	<!-- [ Libraries ] -->
@@ -130,16 +130,7 @@
 
 	<!-- [ Icon ] -->
 
-	<assets path="setup/icon.png" rename="icon.png" if="linux || mac" />
-	<icon path="setup/icon.png" />
-
-	<!-- [ Miscellaneous ] -->
-
-	<target id="haxe" tool="linker" if="linux">
-		<lib name="/usr/lib64/libX11.so" if="HXCPP_M64" /> <!-- linux support -->
-	</target>
-	<target id="haxe" tool="linker" if="macos">
-		<lib name="/lib64/libX11.a" if="HXCPP_M64" /> <!-- mac support -->
-	</target>
+	<assets path="include/icon.png" rename="icon.png" if="linux || mac" />
+	<icon path="include/icon.png" />
 
 </project>
